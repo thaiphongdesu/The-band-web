@@ -1,0 +1,82 @@
+/* pc */
+@media(min-width: 64em){
+    #header #menu-bar{
+        display: none;
+    }
+}
+/* tablet */
+@media(max-width: 63.9375em) and (min-width: 46.25em){
+    #header #menu-bar{
+        display: none;
+    }
+}
+/* mobile */
+@media (max-width: 46.1875em){
+    #header{
+        overflow: hidden;
+    }
+    #nav {
+        display: block;
+    }
+    #header #nav li{
+        display: block;
+    }
+    #header #nav .subnav{
+        background: #333;
+    }
+    #nav .subnav li a {
+        padding: 3px 40px;
+        color: #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    #header .open{
+        position: initial;
+        display: block;
+    }
+    #header #search-btn{
+        display: none;
+    }
+    #header #menu-bar{
+        line-height: 46px;
+        padding: 13px 21px;
+        color: #ccc;
+        font-size: 20px;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #nav > li > a{
+        display: block;
+    }
+    #nav > li:first-child{
+        display: inline-block !important;
+    }
+    /* -------------------------------Slider----------------------------------- */
+    #slider .text-content{
+        display: none;
+    }
+    /* -------------------------------Band content----------------------------------- */
+    #content .about{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    #content .member {
+        width: 100%;
+    }
+    #content .member-image {
+        width: 60%;
+    }
+    /* -------------------------------Tour content----------------------------------- */
+    .places .place-item {
+        width: 100%;
+    }
+    /* -------------------------------Contact content----------------------------------- */
+    #contact .contact-info,
+    #contact .contact-form{
+        width: 100%;
+    }
+    #contact .contact-form{
+        padding-top: 10px;
+    }
+}

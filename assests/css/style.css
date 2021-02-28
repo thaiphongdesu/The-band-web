@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* 
+Từ ngoài vào trong.
+Từ trên xuống dưới.
+Tổng quan đến chi tiết.
+*/
+/* Vị trí
+Kích thước
+Màu sắc
+Kiểu dáng (kiểu chữ, hình dáng,...) */
+#main{
+    max-width: 100%;
+    overflow: hidden;
+}
+/* common */
+.white-text{
+    color: #fff !important;
+}
+.text-center{
+    text-align: center;
+}
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+/* -------------------------------Navigation css---------------------------- */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    height: 46px;
+    z-index: 1;
+}
+#nav{
+    display: inline-block;
+}
+#nav , .subnav{
+    list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+    position: relative;
+}
+#nav > li > a{
+    color: #ccc;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+#header #nav li .down-arrow{
+    font-size: 12px;
+}
+#nav > li:hover > a, #nav .subnav li:hover a{
+    color: #333;
+    background-color: #ccc;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 160px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav li a{
+    text-decoration: none;
+    color: #333;
+    line-height: 42px;
+    padding: 0 12px;
+    display: block;
+}
+#header #search-btn{
+    float: right;
+}
+#header #search-btn:hover i{
+    background-color: crimson;
+    cursor: pointer;
+}
+#header .ti-search{
+    line-height: 46px;
+    padding: 13px 21px;
+    color: #ccc;
+    font-size: 20px;
+}
+/* -----------------------End navigation css----------------------------- */
+/* -------------------------Slider css----------------------------------- */
+#slider{
+    margin-top: 46px;
+    margin-bottom: 10px;
+    position: relative;
+}
+#slider img{   
+    width: 100%;
+    opacity: .8;
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: rgba(255, 255, 255, 1);
+    /* left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-shadow: 0 0 2px #000;
+}
+/* -------------------------End Slider css-------------------------------- */
+/* -------------------------content css start-------------------------------- */
+#content{
+
+}
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .heading-section{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+#content .subheading-section{
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-style: italic;
+    opacity: .6;
+}
+#content .about{
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: justify;
+}
+#band .band-members{
+    padding: 32px 0;
+}
+#content .member{
+    float: left;
+    width: 33.33333%;
+    margin-top: 47px;
+}
+#content .name{
+    font-size: 17px;
+    line-height: 1.5;
+}
+#content .member-image{
+    width: 154px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+/* tour */
+.tour-container{
+    background: #000;
+}
+.tour-container .tickets-status{
+    background: #fff;
+    list-style: none;
+    margin-top: 40px;
+    font-size: 15px;
+    text-align: left;
+}
+.tour-container li{
+    padding: 11px 15px;
+    color: #757575;
+    border-bottom: 1px solid #ddd;
+}
+.tour-container .sold-out{
+    background: #f44336;
+    color: #fff;
+    padding: 5px 5px;
+    margin-left: 16px;
+}
+.tour-container .quantity{
+    float: right;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 25px;
+    margin-top: -5px;
+}
+/* places */
+.places{
+    margin-top: 32px;
+}
+.places .place-item{
+    float: left;
+    width: 33.3333%;
+    padding: 0 8px 48px;
+}
+.place-item .place-img{
+    width: 100%;
+}
+.place-item .place-img:hover{
+    opacity: .6;
+}
+.place-item .content{
+    background: #fff;
+    font-size: 15px;
+    padding: 16px;
+}
+.place-item .content .heading{
+    font-size: 15px;
+}   
+.place-item .content .time{
+    margin: 16px 0;
+    color: #757575; 
+}
+.place-item .content .desc{
+    
+}
+.place-item .content .btn{
+    background: #000;
+    color: #fff;
+    padding: 11px 13px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 16px 0;
+}
+.place-item .content .btn:hover{
+    background: #ccc;
+    color: #000;
+}
+/* contact section */
+.contact-section .contact-content{
+    margin-top: 48px;
+}
+.contact-section .contact-content .contact-info{
+    font-size: 18px;
+    padding: 17px;
+}
+.contact-section .contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.contact-section .contact-content .contact-form{
+    font-size: 15px;
+}
+.contact-section .contact-form .inp-mes{
+    width: 100%;
+}
+.contact-section .contact-form .form-control{
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+    
+}
+.contact-section .contact-form .inp-mes{
+    margin-top: 8px;
+}
+.contact-section .contact-form .submit-btn{
+    float: right;
+    background: #000;
+    color: #fff;
+    margin-top: 16px;
+    border: none;
+    padding: 11px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact-section .contact-form .submit-btn:hover{
+    background: #ccc;
+    color: #333;
+}
+.map img{
+    width: 100%;
+    filter: grayscale(50%);
+}
+/* -------------------------content css end-------------------------------- */
+
+#footer{
+    padding: 64px;
+    background: #fff;
+}
+#footer .socials-list{
+    font-size: 24px;
+    letter-spacing: .6px;
+    opacity: .6;
+    padding-bottom: 15px;
+}
+#footer .socials-list a{
+    text-decoration: none;
+    
+}
+#footer .socials-list a:hover{
+    opacity: .6;
+}
+#footer .copyright{
+    margin: 15px 0;
+}
+#footer .copyright,
+#footer a{
+    color: rgba(0, 0, 0, 0.7);
+}
