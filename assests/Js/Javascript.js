@@ -31,12 +31,29 @@ var menuList = document.querySelectorAll('#header #nav li a[href*="#"]');
 for(var i = 0; i < menuList.length; i++){
     menuList[i].onclick = function(e){
         var isSubNav = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
-        if(!isSubNav){
-            header.style.height = null;
-            document.querySelector('.subnav').classList.remove('open');
-        }else{
+        if(this.nextElementSibling.classList.contains("open"))
+        {
             e.preventDefault();
-            this.nextElementSibling.classList.add('open');
+            this.nextElementSibling.classList.remove("open");
+        } else {
+            e.preventDefault();
+            this.nextElementSibling.classList.add("open");
         }
     }
 }
+
+// onclick copy phone number to clipboard 
+document.getElementById("phone-number").addEventListener("click", function() {
+    const phone_number = document.getElementById("phone-number").innerText;
+
+    navigator.clipboard.writeText(phone_number).then(() => {
+        const toast = document.getElementById("toast");
+        toast.textContent = "Copied to clipboard!";
+        toast.className = "show";
+        setTimeout(() => {
+            toast.className = toast.className.replace("show", "");
+        }, 2000);
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+});

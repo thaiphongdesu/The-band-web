@@ -192,6 +192,10 @@ Kiểu dáng (kiểu chữ, hình dáng,...) */
     font-size: 15px;
     text-align: left;
 }
+.tour-container .tickets-status .month {
+    width: 100px;
+    display: inline-block;
+}
 .tour-container li{
     padding: 11px 15px;
     color: #757575;
@@ -201,7 +205,6 @@ Kiểu dáng (kiểu chữ, hình dáng,...) */
     background: #f44336;
     color: #fff;
     padding: 5px 5px;
-    margin-left: 16px;
 }
 .tour-container .quantity{
     float: right;
@@ -266,6 +269,12 @@ Kiểu dáng (kiểu chữ, hình dáng,...) */
 .contact-section .contact-info i[class*="ti-"]{
     width: 30px;
     display: inline-block;
+    padding-left: 3px;
+}
+.contact-section .contact-info .mail {
+    text-decoration: none;
+    color: black;
+    padding-left: 14px;
 }
 .contact-section .contact-content .contact-form{
     font-size: 15px;
@@ -325,4 +334,28 @@ Kiểu dáng (kiểu chữ, hình dáng,...) */
 #footer .copyright,
 #footer a{
     color: rgba(0, 0, 0, 0.7);
+}
+
+/* toast css */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 5%;
+  top: 50px;
+  font-size: 14px;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
 }

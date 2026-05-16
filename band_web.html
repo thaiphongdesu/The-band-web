@@ -13,7 +13,7 @@
         <div id="header">
             <!-- Begin nav -->
             <ul id="nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="">Home</a></li>
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -22,9 +22,9 @@
                     <i class="down-arrow ti-angle-double-down"></i>
                 </a>
                     <ul class="subnav">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
+                        <li><a href="#_">Merchandise</a></li>
+                        <li><a href="#_">Extras</a></li>
+                        <li><a href="#_">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -94,9 +94,9 @@
                         <p class="subheading-section white-text text-center">Remember to book your tickets!</p>
                         <!-- tickets -->
                         <ul class="tickets-status">
-                            <li>September <span class="sold-out">Sold out</span></li>
-                            <li>October <span class="sold-out">Sold out</span></li>
-                            <li>November <span class="quantity text-center">3</span></li>
+                            <li><span class="month">September</span> <span class="sold-out">Sold out</span></li>
+                            <li><span class="month">October</span> <span class="sold-out">Sold out</span></li>
+                            <li><span class="month">November</span> <span class="quantity text-center">3</span></li>
                         </ul>                       
                         <!-- places -->
                         <div class="row places clear">
@@ -138,8 +138,8 @@
                     <div class="row contact-content clear">
                         <div class="col col-half contact-info">
                             <p class="add-content"><i class="ti-location-pin"></i>Chicago, US</p>
-                            <p class="add-content"><i class="ti-mobile"></i>Phone: +00 151515</p>
-                            <p class="add-content"><i class="ti-email"></i>Email: mail@mail.com</p>
+                            <p class="add-content"><i class="ti-mobile"></i>Phone: <span id="phone-number">+00 151515</span></p>
+                            <p class="add-content"><i class="ti-email"></i>Email:<a class="mail" href="#to_mail">mail@mail.com</a></p>
                         </div>
                         <div class="col col-half contact-form">
                             <form action="">
@@ -165,6 +165,7 @@
             <div class="map">
                 <img src="./assests/map.jpg" alt="">
             </div>
+            <div id="toast"></div>
         </div>
         <!-- content end -->
 

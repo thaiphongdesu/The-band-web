@@ -23,12 +23,26 @@
     }
     #header #nav .subnav{
         background: #333;
+        display: block;
     }
     #nav .subnav li a {
         padding: 3px 40px;
         color: #ccc;
         border-bottom: 1px solid #ccc;
     }
+
+    #nav .subnav {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        /* Show when active */
+    #nav li.active .subnav {
+        display: block;
+    }
+
     #header .open{
         position: initial;
         display: block;
@@ -51,6 +65,13 @@
     }
     #nav > li:first-child{
         display: inline-block !important;
+    }
+
+    #nav {
+        flex-direction: column;
+    }
+    #nav li {
+        width: 100%;
     }
     /* -------------------------------Slider----------------------------------- */
     #slider .text-content{
